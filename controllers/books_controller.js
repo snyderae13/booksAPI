@@ -45,7 +45,9 @@ books.get('/seed', (req, res) => {
 
 //index
 books.get('/', (req, res) => {
+    console.log('endpoint hit')
     Book.find()
+    
         .then(foundBooks => {
             res.status(200).json(foundBooks)
         })
